@@ -1,0 +1,71 @@
+<!-- DRAFT ONLY - lives on branch draft-payments, NOT deployed to the live site.
+     ARVO tickets & payments page. Built to plug into ARVO's own ticket system:
+     mount it inside <div id="arvo-tickets"> below, or replace the placeholder
+     payment blocks with live links (Paymob/Kashier payment link, InstaPay, etc.).
+     Nothing on this page charges anyone until a real payment link is pasted in. -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tickets | ARVO .EVENTS</title>
+<meta name="description" content="Tickets for ARVO nights in Alexandria, Egypt.">
+<link rel="icon" href="favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .ticket{border:1px solid #222;border-radius:12px;padding:28px;margin:24px 0}
+  .ticket h3{margin:0 0 6px}
+  .ticket .meta{color:#999;display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+  .price{font-family:'Montserrat',sans-serif;font-size:28px;margin:8px 0 16px}
+  .methods{display:grid;gap:12px;margin-top:16px}
+  .method{display:flex;justify-content:space-between;align-items:center;border:1px solid #2a2a2a;border-radius:10px;padding:14px 18px}
+  .method small{color:#888}
+  .soldout{opacity:.5}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a href="index.html"><img src="nav-logo.png" alt="ARVO .EVENTS"></a>
+<ul><li><a href="index.html#about">About</a></li><li><a href="index.html#events">Events</a></li><li><a href="index.html#contact">Contact</a></li></ul></div></nav>
+
+<header class="hero" id="top">
+<h1>Tickets.</h1>
+<p class="sub">ARVO nights &middot; Alexandria, Egypt</p>
+</header>
+
+<section><div class="wrap">
+
+<!-- INTEGRATION POINT: ARVO's own ticket system mounts here.
+     If it renders its own UI, everything below can be deleted. -->
+<div id="arvo-tickets">
+
+<article class="ticket">
+<h3>MYTHOS</h3>
+<div class="meta"><span>Jesuit Cultural Center</span><span>26 Nov</span><span>6 PM</span></div>
+<p class="price">Free entry</p>
+<a class="cta" href="https://instagram.com/arvo.raw" target="_blank" rel="noopener">RSVP via @arvo.raw</a>
+</article>
+
+<article class="ticket soldout">
+<h3>Next paid night</h3>
+<div class="meta"><span>TBA</span><span>Lineup drops on Instagram first</span></div>
+<p class="price">EGP ---</p>
+
+<!-- PLACEHOLDER: replace each href="#" with the live link/handle when ready.
+     Option A (recommended): one Paymob or Kashier "payment link" per ticket type.
+     Option B: manual InstaPay / Vodafone Cash with order reference, then confirm by DM. -->
+<div class="methods">
+<div class="method"><span>Card / Meeza / wallet</span><small>payment link goes here</small></div>
+<div class="method"><span>InstaPay</span><small>handle goes here</small></div>
+<div class="method"><span>Vodafone Cash</span><small>number goes here</small></div>
+</div>
+</article>
+
+</div><!-- /arvo-tickets -->
+
+</div></section>
+
+<footer><div class="wrap"><span>ARVO .EVENTS</span><span>Entertainment &amp; Events &middot; Alexandria</span></div></footer>
+</body></html>
